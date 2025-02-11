@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAN RADAR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="3.css">
+
+    <!-- Bootstrap Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Links -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+      /* Centrado del formulario */
+      .registration-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+        padding: 40px 0;
+      }
+
+      .registration-area header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .registration-area header h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .registration-area header p {
+        color: #555;
+        font-size: 1rem;
+      }
+
+      .form-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .form-group select, 
+      .form-group input[type="radio"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        margin-top: 8px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .form-group input[type="radio"] {
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #ffa500;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .button:hover {
+        background-color: darkorange;
+        cursor: pointer;
+      }
+
+      /* Estilo de resultados */
+      .results {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .result-package {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        width: calc(33.33% - 20px);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .result-package img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .result-package h3 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 10px;
+      }
+
+      .result-package p {
+        font-size: 14px;
+        color: #555;
+        margin-top: 5px;
+      }
+
+      .result-package .button {
+        background-color: #ffa500;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 10px;
+        transition: 0.3s ease;
+      }
+
+      .result-package .button:hover {
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" id="logo">
+          <span id="travel"><img src="image-removebg-preview.ico" alt="logo" style="max-width: 100%; height: auto; width: 50px;" />PLAN</span>RADAR
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+            <li class="nav-item"><a class="nav-link active" href="index.html">INICIO</a></li>
+            <li class="nav-item"><a class="nav-link" href="Arma_tu_plan.html">ARMA TU PLAN</a></li>
+            <li class="nav-item"><a class="nav-link" href="PLANES.HTML">PLANES</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallary">GALERIA</a></li>
+            <li class="nav-item"><a class="nav-link" href="Login.html">LOGIN</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <!-- Registration Form Section -->
+    <section class="registration-area">
+      <div class="form-container">
+        <header>
+          <h1>¡Arma tu Plan Perfecto en Medellín!</h1>
+          <p>Selecciona las opciones y crea tu día de diversión a medida.</p>
+        </header>
+
+        <form id="planForm">
+          <!-- Número de paradas -->
+          <div class="form-group">
+            <label for="paradas">¿Cuántas paradas deseas hacer?</label>
+            <select id="paradas" name="paradas">
+              <option value="1">1 Parada</option>
+              <option value="2">2 Paradas</option>
+              <option value="3">3 Paradas</option>
+              <option value="4">4 Paradas</option>
+              <option value="5">5 Paradas</option>
+            </select>
+          </div>
+
+          <!-- Categorías -->
+          <div class="form-group">
+            <label for="categorias">Elige las categorías de entretenimiento:</label>
+            <select id="categorias" name="categorias" multiple>
+              <option value="Entretenimiento">Entretenimiento General</option>
+              <option value="Aventura">Deportes y Aventura</option>
+              <option value="Familia">Actividades en Familia</option>
+              <option value="Videojuegos">Juegos Virtuales y Simuladores</option>
+              <option value="Karaoke">Karaoke y Música</option>
+            </select>
+          </div>
+
+          <!-- Mascotas -->
+          <div class="form-group">
+            <label for="mascotas">¿Te acompañan tus mascotas?</label>
+            <input type="radio" id="mascotas_si" name="mascotas" value="Si" title="Selecciona si te acompañan tus mascotas"> Sí
+            <input type="radio" id="mascotas_no" name="mascotas" value="No" title="Selecciona si no te acompañan tus mascotas"> No
+        </div>
+
+          <!-- Parqueadero -->
+          <div class="form-group">
+            <label for="parqueadero">¿Necesitas parqueadero?</label>
+            <input type="radio" id="parqueadero_si" name="parqueadero" value="Si" title="Selecciona si necesitas parqueadero"> Sí
+            <input type="radio" id="parqueadero_no" name="parqueadero" value="No" title="Selecciona si no necesitas parqueadero"> No
+        </div>
+
+          <button type="button" class="button" onclick="mostrarPaquete()">¡Arma mi Plan de Diversión!</button>
+        </form>
+
+        <!-- Aquí se mostrarán los resultados -->
+        <div class="results" id="results"></div>
+        <script>
+            // Aquí definimos la tabla de 50 planes directamente en el código HTML
+            const planes = [
+                { empresa: "Casa de Diversión Medellín", nombre_plan: "Casa de Diversión", descripcion: "Espacio amplio con juegos de salón, billar, ping pong y área para eventos sociales.", precio: "$100,000 COP", categoria: "Entretenimiento", direccion: "Calle 50 # 80-22, Medellín", aceptan_mascotas: "Sí", parqueadero: "Sí", imagen: "https://example.com/imagen1.jpg" },
+                { empresa: "Centro de Entretenimiento City Fun", nombre_plan: "City Fun", descripcion: "Zona de juegos interactivos y área de cine.", precio: "$120,000 COP", categoria: "Entretenimiento", direccion: "Carrera 65 # 42-08, Medellín", aceptan_mascotas: "No", parqueadero: "Sí", imagen: "https://example.com/imagen2.jpg" },
+                { empresa: "La Casa del Karaoke", nombre_plan: "Karaoke", descripcion: "Sala de karaoke con una amplia selección de canciones.", precio: "$80,000 COP", categoria: "Karaoke", direccion: "Calle 47 # 33-17, Medellín", aceptan_mascotas: "Sí", parqueadero: "No", imagen: "https://example.com/imagen3.jpg" },
+                { empresa: "Casa de Escape Room Medellín", nombre_plan: "Escape Room", descripcion: "Juegos de escape room con diferentes temáticas.", precio: "$150,000 COP", categoria: "Aventura", direccion: "Carrera 49 # 78-45, Medellín", aceptan_mascotas: "No", parqueadero: "Sí", imagen: "https://example.com/imagen4.jpg" },
+                { empresa: "Jardín de Entretenimiento La Montaña", nombre_plan: "Jardín de Entretenimiento", descripcion: "Espacio verde para actividades al aire libre.", precio: "$50,000 COP", categoria: "Familia", direccion: "Calle 36 # 10-45, Medellín", aceptan_mascotas: "Sí", parqueadero: "Sí", imagen: "https://example.com/imagen5.jpg" },
+                { empresa: "Karts Medellín", nombre_plan: "Karts", descripcion: "Circuito de karts para todas las edades.", precio: "$70,000 COP", categoria: "Aventura", direccion: "Carrera 32 # 23-11, Medellín", aceptan_mascotas: "No", parqueadero: "Sí", imagen: "https://example.com/imagen6.jpg" },
+                { empresa: "El Mundo del Videojuego", nombre_plan: "Videojuegos", descripcion: "Salas de videojuegos y simuladores virtuales.", precio: "$60,000 COP", categoria: "Videojuegos", direccion: "Calle 59 # 45-12, Medellín", aceptan_mascotas: "Sí", parqueadero: "Sí", imagen: "https://example.com/imagen7.jpg" },
+                { empresa: "Parque Norte", nombre_plan: "Diversión en el Parque", descripcion: "Parque de diversiones con montañas rusas y juegos mecánicos.", precio: "$150,000 COP", categoria: "Aventura", direccion: "Calle 74 # 34-80, Medellín", aceptan_mascotas: "No", parqueadero: "Sí", imagen: "https://example.com/imagen8.jpg" },
+                // ... (hasta 50 planes)
+            ];
+            
+            function mostrarPaquete() {
+                const numParadas = document.getElementById("paradas").value;
+                const categoriasSeleccionadas = Array.from(document.getElementById("categorias").selectedOptions).map(option => option.value);
+            
+                // Filtrar planes solo por categorías seleccionadas
+                const planesFiltrados = planes.filter(plane => categoriasSeleccionadas.includes(plane.categoria));
+            
+                const resultsDiv = document.getElementById("results");
+                resultsDiv.innerHTML = ""; // Limpiar resultados anteriores
+            
+                if (planesFiltrados.length === 0) {
+                    resultsDiv.innerHTML = "<p>No se encontraron planes que coincidan con los filtros seleccionados.</p>";
+                    return;
+                }
+            
+                let paqueteCount = 1;
+                for (let i = 0; i < planesFiltrados.length && paqueteCount <= numParadas; i++) {
+                    const paquete = planesFiltrados[i];
+                    const resultHTML = `
+                        <div class="result-package">
+                            <h3>Paquete ${paqueteCount}: ${paquete.nombre_plan}</h3>
+                            <img src="${paquete.imagen}" alt="${paquete.nombre_plan}">
+                            <p><strong>Descripción:</strong> ${paquete.descripcion}</p>
+                            <p><strong>Precio:</strong> ${paquete.precio}</p>
+                            <p><strong>Dirección:</strong> ${paquete.direccion}</p>
+                        </div>
+                    `;
+                    resultsDiv.innerHTML += resultHTML;
+                    paqueteCount++;
+                }
+            }
+            </script>
+
+      </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer id="footer">
+      <h1><span>PLAN</span>RADAR</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, fuga.</p>
+      <div class="social-links">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+      </div>
+      <div class="credite">
+        <p>Designed By <a href="#">PLAN RADAR</a></p>
+      </div>
+      <div class="copyyright">
+        <p>&copy;PLAN RADAR</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

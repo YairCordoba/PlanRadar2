@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="public/icons/mdi/materialdesignicons.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<style>
+    #navbar {
+        background: #f9f9f9;
+    }
+
+    #logo {
+        font-size: 36px;
+        font-weight: 700;
+        color: black;
+        text-shadow: 0px 1px 1px black;
+        margin-bottom: 2px;
+    }
+
+    #logo span {
+        color: #a92526;
+    }
+
+    .section-content {
+        display: none; /* Inicialmente ocultamos todas las secciones */
+    }
+    /* Packages Start */
+.main-txt h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+  }
+  .main-txt h1 span{
+    color: orange;
+  }
+  .main-txt h5{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  .main-txt h5 span{
+    color: orange;
+  }
+  .packages .card{
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .packages .card img{
+    border-radius: 5px;
+  }
+  .packages .card .card-body{
+    background: transparent;
+  }
+  .packages .card .card-body h3{
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .packages .card .card-body p{
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .star i{
+    font-size: 15px;
+  }
+  .checked{
+    color: orange;
+  }
+  .section-content .card .card-body h6{
+    font-size: 20px;
+  }
+  .section-content .card .card-body a{
+    padding: 10px;
+    text-decoration: none;
+    background: orange;
+    color: white;
+    border-radius: 5px;
+  }
+  .section-content {
+        display: none; /* Inicialmente ocultamos todas las secciones */
+    }
+  /* Packages End */
+
+</style>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h1 id="logo">Mi<span>Usuario</span></h1>
+            </div>
+            <ul class="list-unstyled components">
+                <div style="display: flex; justify-content: center; align-items: center; height: 20vh;">
+                    <img src="image-removebg-preview.ico" alt="logo" style="max-width: 100%; height: auto; width: 150px;">
+                </div>
+                <p></p>
+                <li>
+                    <a href="#" onclick="toggleSection('planes')">Planes</a>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSection('about')">Favoritos</a>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSection('armaTuPlan')">Arma tu plan</a>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSection('favoritos')">Momentos</a>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSection('comentarios')">Comentarios</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light" style="background: #f1f1f3;">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-light rounded-circle" style="border: 2px solid #e1e1e1;">
+                        <i class="mdi mdi-menu mdi-24px"></i>
+                    </button>
+                    <ul class="nav navbar-nav ml-auto">
+                        <li>
+                            <a href="#" class="dropdown-toggle profile-navbar" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <img src="https://avatars1.githubusercontent.com/u/49246221?s=60&u=1c235446e9abad64a002c82ec494f93d290110ff&v=4" class="img-fluid rounded-circle shadow" width="40">
+                                Xibalsba<i class="mdi mdi-chevron-down ml-1"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-item"><a href="#"><i class="mdi mdi-account mr-1"></i>Mi perfil</a></li>
+                                <li class="dropdown-item"><a href="#"><i class="mdi mdi-settings mr-1"></i>Ajustes</a></li>
+                                <div class="dropdown-divider"></div>
+                                <li class="dropdown-item"><a href="#"><i class="mdi mdi-logout-variant mr-1"></i>Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Content of Dashboard -->
+            <!--
+<div id="welcome-container" class="container">
+    <h2>Bienvenido a</h2>
+    <p>¡Aquí puedes administrar tu cuenta, planes y más!</p>
+</div>
+-->
+<div id="welcome-container" class="container"> 
+                <div class="main-txt" style="padding-top: 10px;">
+                   <h1><span>Bienve</span>nid@s</h1>
+                   <h1><span>PLAN</span>RADAR</h1>
+                   </div>
+                   <div class="main-txt">
+                     <h5><span>M</span>EDELLÍN</h5>
+                 </div>
+                   <div class="row" style="margin-top: 50px;">
+                      <div class="col-md-6 py-3 py-md-0">
+                         <div class="card">
+                            <img src="image-removebg-preview.ico" alt="">
+                         </div>
+                      </div>
+          
+                      <div class="col-md-6 py-3 py-md-0">
+                         <h2>Descubre Medellín, la Ciudad de la Eterna Primavera, con Nosotros</h2>
+                         <p>Te invitamos a descubrir Medellín desde una perspectiva local, disfrutando de un viaje que enriquecerá tu alma y te dejará recuerdos imborrables. Ven y vive la magia de Medellín con nosotros, donde cada momento es una oportunidad para explorar, aprender y celebrar la vida.</p>
+                         <p>Medellín no es solo un destino turístico; es una experiencia que despierta todos los sentidos. Conocida como la "Ciudad de la Eterna Primavera", Medellín combina un clima agradable con un ambiente vibrante y acogedor. Al visitar esta metrópolis, te sumergirás en una rica cultura, una historia fascinante y un desarrollo urbano innovador</p>
+                         <p>Desde sus impresionantes transformaciones sociales y urbanísticas hasta su gastronomía deliciosa, Medellín tiene algo para todos. Podrás explorar barrios emblemáticos como la Comuna 13, donde el arte urbano cuenta historias de superación, o perderte en los hermosos paisajes del Parque Arví y el Jardín Botánico</p>
+                      </div>
+                   </div>
+                </div>
+                <!-- Planes Section -->
+                <section id="planes" class="section-content">
+                        <div class="container">
+                           <div class="main-txt">
+                              <h1><span>P</span>LANES</h1>
+                           </div> 
+                           <div class="row" style="margin-top: 30px;">
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Guatapé.jpg" alt="Guatapé">
+                                    <div class="card-body">
+                                       <h3>Guatapé</h3>
+                                       <p>Sube al Peñol y disfruta de una vista espectacular de este colorido pueblo.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$100</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Parque Arví.jpg" alt="Parque Arví">
+                                    <div class="card-body">
+                                       <h3>Parque Arví</h3>
+                                       <p>Conéctate con la naturaleza en el corazón del Parque Arví, ideal para caminatas y ecoturismo.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$50</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Metrocable.jpg" alt="Metrocable">
+                                    <div class="card-body">
+                                       <h3>Metrocable</h3>
+                                       <p>Recorre las montañas de Medellín en el Metrocable, con vistas panorámicas de la ciudad.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$10</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           <div class="row" style="margin-top: 30px;">
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Ciudad del Río.jpg" alt="Ciudad del Río">
+                                    <div class="card-body">
+                                       <h3>Ciudad del Río</h3>
+                                       <p>Explora uno de los centros culturales más innovadores de Medellín.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$20</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Plaza de Botero.jpg" alt="Plaza de Botero">
+                                    <div class="card-body">
+                                       <h3>Plaza de Botero</h3>
+                                       <p>Admira las famosas esculturas del artista Fernando Botero en el corazón de la ciudad.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$0</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Pueblito Paisa.jpg" alt="Pueblito Paisa">
+                                    <div class="card-body">
+                                       <h3>Pueblito Paisa</h3>
+                                       <p>Visita esta réplica de un pueblo tradicional antioqueño con vistas panorámicas de Medellín.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$15</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           <div class="row" style="margin-top: 30px;">
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Jardín Botánico.jpg" alt="Jardín Botánico">
+                                    <div class="card-body">
+                                       <h3>Jardín Botánico</h3>
+                                       <p>Un hermoso espacio verde en el corazón de Medellín para disfrutar de la flora local.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$0</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="./images/temploparadiso.jpg" alt="Templo Paraiso">
+                                    <div class="card-body">
+                                       <h3>Templo del Paraíso</h3>
+                                       <p>Visita esta impresionante iglesia con hermosos paisajes alrededor.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$5</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Planetario de Medellín.jpg" alt="Planetario">
+                                    <div class="card-body">
+                                       <h3>Planetario de Medellín</h3>
+                                       <p>Explora el universo en el Planetario de Medellín, ideal para aprender sobre astronomía.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$10</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row" style="margin-top: 30px;">
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Parque Explora.jpg" alt="Parque Explora">
+                                    <div class="card-body">
+                                       <h3>Parque Explora</h3>
+                                       <p>Un lugar interactivo para toda la familia con exposiciones de ciencia y tecnología.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div>
+                                       <h6>Price: <strong>$30</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Mirador de las Palmas.jpg" alt="Mirador de las Palmas">
+                                    <div class="card-body">
+                                       <h3>Mirador de las Palmas</h3>
+                                       <p>Sube hasta este mirador para obtener una vista impresionante de Medellín, ideal para fotos.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div>
+                                       <h6>Price: <strong>$15</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Teatro Metropolitano.jpg" alt="Teatro Metropolitano">
+                                    <div class="card-body">
+                                       <h3>Teatro Metropolitano</h3>
+                                       <p>Asiste a eventos culturales en uno de los teatros más importantes de la ciudad.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div>
+                                       <h6>Price: <strong>$20</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           <div class="row" style="margin-top: 30px;">
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Museo de Antioquia.jpg" alt="Museo de Antioquia">
+                                    <div class="card-body">
+                                       <h3>Museo de Antioquia</h3>
+                                       <p>Sumérgete en la historia y el arte de Antioquia, con una vasta colección de obras de Botero y otros artistas.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div>
+                                       <h6>Price: <strong>$12</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Mercado del Río.jpg" alt="Mercado del Río">
+                                    <div class="card-body">
+                                       <h3>Mercado del Río</h3>
+                                       <p>Disfruta de una amplia oferta gastronómica y cultural en este vibrante espacio de Medellín.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div>
+                                       <h6>Price: <strong>$25</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Parque Lleras.jpg" alt="Parque Lleras">
+                                    <div class="card-body">
+                                       <h3>Parque Lleras</h3>
+                                       <p>Un lugar ideal para disfrutar de la vida nocturna, bares y restaurantes en el Poblado.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                       </div>
+                                       <h6>Price: <strong>$0</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           </div>
+                        </section>
+                <!-- About Section -->
+                <section id="about" class="section-content">
+                    <h3>About</h3>
+                    <p>Este sitio web es una plataforma para gestionar tus planes, favoritos y más.</p>
+                        <div class="container">
+                           <div class="main-txt">
+                              <h1><span>Favo</span>ritos</h1>
+                           </div> 
+                           <div class="row" style="margin-top: 30px;">
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Guatapé.jpg" alt="Guatapé">
+                                    <div class="card-body">
+                                       <h3>Guatapé</h3>
+                                       <p>Sube al Peñol y disfruta de una vista espectacular de este colorido pueblo.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$100</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Parque Arví.jpg" alt="Parque Arví">
+                                    <div class="card-body">
+                                       <h3>Parque Arví</h3>
+                                       <p>Conéctate con la naturaleza en el corazón del Parque Arví, ideal para caminatas y ecoturismo.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$50</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Metrocable.jpg" alt="Metrocable">
+                                    <div class="card-body">
+                                       <h3>Metrocable</h3>
+                                       <p>Recorre las montañas de Medellín en el Metrocable, con vistas panorámicas de la ciudad.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$10</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           <div class="row" style="margin-top: 30px;">
+                              <div class="col-md-4 py-3 py-md-0">
+                                 <div class="card">
+                                    <img src="PLANES\Ciudad del Río.jpg" alt="Ciudad del Río">
+                                    <div class="card-body">
+                                       <h3>Ciudad del Río</h3>
+                                       <p>Explora uno de los centros culturales más innovadores de Medellín.</p>
+                                       <div class="start">
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star checked"></i>
+                                          <i class="fa-solid fa-star "></i>
+                                       </div>
+                                       <h6>Price: <strong>$20</strong></h6>
+                                       <a href="#book">Book Now</a>
+                                    </div>
+                                 </div>
+                              </div>
+                </section>
+
+                <!-- Arma tu plan Section -->
+                <section id="armaTuPlan" class="section-content">
+                    <h3>Arma tu Plan</h3>
+                    <p>Selecciona tus preferencias para crear el plan perfecto para ti.</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="planOption">Elige un plan</label>
+                            <select class="form-control" id="planOption">
+                                <option>Plan 1</option>
+                                <option>Plan 2</option>
+                                <option>Plan 3</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Crear Plan</button>
+                    </form>
+                </section>
+
+                <!-- Favoritos Section -->
+                <section id="favoritos" class="section-content">
+                    <section class="gallary" id="gallary">
+                        <div class="container">
+                           <div class="main-txt" style="padding-top: 10px;">
+                              <h1><span>G</span>allary</h1>
+                              </div>
+                              <div class="row" style="margin-top: 30px;">
+                                 <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                       <img src="IMAGENES\240_F_814330562_6CfdgOK6IF2ttWJftsaRtCCC00AOZl1M.jpg" alt=""  height="230px">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                       <img src="IMAGENES\240_F_614153902_xKIxFeipnUIvxC7GJnkR0pzuouxEFDAQ.jpg" alt="" height="230px">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                       <img src="IMAGENES\240_F_814330562_6CfdgOK6IF2ttWJftsaRtCCC00AOZl1M.jpg" alt=""  height="230px">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row" style="margin-top: 30px;">
+                                 <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                       <img src="IMAGENES\240_F_399315111_QzJX6NH3EfSK7akLlOBkUb6U7i8PlbQ1.jpg" alt=""  height="230px">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                       <img src="IMAGENES\240_F_356250925_NrVvJqxXYgLIFfN38SVAFEVKJgKho852.jpg" alt="" height="230px">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                       <img src="IMAGENES\240_F_334644639_IVQCbAqKuTuiPHyep3EYfMJXr3rsaRdj.jpg" alt=""  height="230px">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                     </section>
+                </section>
+
+                <!-- Comentarios Section -->
+                <section id="comentarios" class="section-content">
+                    <h3>Comentarios sobre Planes en Medellín</h3>
+                    <p>Deja tus comentarios sobre los planes realizados en Medellín o el sitio en general.</p>
+                    
+                    <!-- Formulario para ingresar comentarios -->
+                    <form>
+                        <div class="form-group">
+                            <label for="comment">Comentario</label>
+                            <textarea class="form-control" id="comment" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+                    </form>
+                
+                    <!-- Sección de comentarios -->
+                    <div class="mt-5">
+                        <h4>Comentarios Recientes sobre planes en Medellín:</h4>
+                        
+                        <!-- Tarjeta de comentario -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Juan Pérez</h5>
+                                <p class="card-text">"El tour por el Pueblito Paisa fue increíble, las vistas de Medellín son impresionantes. Recomiendo hacerlo al amanecer para evitar el calor." </p>
+                            </div>
+                        </div>
+                
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Juan Pérez</h5>
+                                <p class="card-text">"Hice un plan de ecoturismo en el Parque Arví, me encantó la experiencia de estar en plena naturaleza y además fue muy educativo." </p>
+                            </div>
+                        </div>
+                
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Juan Pérez</h5>
+                                <p class="card-text">"La feria de las flores es un plan obligado. Si visitan Medellín en agosto, ¡no se pueden perder este evento! Las flores y los desfiles son espectaculares." </p>
+                            </div>
+                        </div>
+                
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Juan Pérez</h5>
+                                <p class="card-text">"Me encantó el recorrido por Comuna 13. La cultura, el arte urbano y la gente hacen de este lugar algo único. Fue un plan turístico muy enriquecedor." </p>
+                            </div>
+                        </div>
+                
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Juan Pérez</h5>
+                                <p class="card-text">"Visité el Jardín Botánico y me sorprendió lo bien cuidado que está el lugar. Ideal para pasar una tarde tranquila en la ciudad." </p>
+                            </div>
+                        </div>
+                
+                    </div>
+                </section>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+        // Función para mostrar u ocultar las secciones al hacer clic en los enlaces
+        function toggleSection(sectionId) {
+            // Ocultar el contenedor de bienvenida
+        document.getElementById("welcome-container").style.display = 'none';
+
+            var sections = document.querySelectorAll('.section-content');
+            sections.forEach(function (section) {
+                if (section.id === sectionId) {
+                    section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+                        // Mostrar la sección correspondiente
+                        var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+    <script>
+        // Verificar si el usuario es un administrador
+        if (localStorage.getItem('userRole') !== 'user') {
+            // Si no es un usuario, redirigir a login
+            window.location.href = 'login.html';
+        }
+        </script>
+        
+</body>
+</html>

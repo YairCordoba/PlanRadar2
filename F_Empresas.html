@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAN RADAR</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Links -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg" id="navbar">
+  <div class="container">
+    
+      <a class="navbar-brand" href="index.html" id="logo"><span id="travel"><img src="image-removebg-preview.ico" alt="logo" style="max-width: 100%; height: auto; width: 50px;" />PLAN</span>RADAR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+        
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Arma_tu_plan.html">ARMA TU PLAN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="PLANES.HTML">PLANES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallary">GALLARY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Login.html">LOGIN</a>
+        </li>
+       </ul>
+    </div>
+  </div>
+</nav>
+<!-- <navbar> -->
+<!-- <Home> -->
+    <div class="home">
+        <div class="content">
+            <div class="main-txt">
+                <h1><span>Impulsa tu Empresa en Medellín: </span>¡Conéctate con Más Personas!</h1>
+             </div>
+            <p>Te invitamos a descubrir Medellín desde una perspectiva local</p>
+            <a href="#book">REGISTRATE</a>
+        </div>
+    </div>
+    <section class="about" id="about">
+    <div class="container">
+       <div class="main-txt" style="padding-top: 10px;">
+          <h1><span>Registra tu</span> Empresa</h1>
+          </div>
+          <div class="main-txt">
+            <h5><span>Únete al Crecimiento de Medellín:</span>¡Llega a Más Personas y Potencia tu Empresa!</h5>
+            <h1>Visit<span class="changecontent"></span></h1>
+        </div>
+          <div class="row" style="margin-top: 50px;">
+             <div class="col-md-6 py-3 py-md-0">
+                <div class="card">
+                   <img src="image-removebg-preview.ico" alt="">
+                </div>
+             </div>
+             <div class="col-md-6 py-3 py-md-0">
+                <h2>Conéctate con Más Personas</h2>
+                <p>Medellín, la Ciudad de la Eterna Primavera, no solo es un destino turístico fascinante, ¡es también el lugar ideal para hacer crecer tu empresa! En una ciudad vibrante, innovadora y en constante transformación, las oportunidades de expansión están a la vuelta de la esquina.
+                    Te invitamos a formar parte de este increíble proceso y conectar con miles de personas que buscan nuevas experiencias, productos y servicios de calidad. Al registrarte con nosotros, no solo estarás accediendo a un público local ávido de nuevas opciones, sino que también podrás llegar a turistas nacionales e internacionales que vienen a Medellín buscando lo mejor de la ciudad.</p>
+                    <h2>¿Por qué registrarte?</h2>
+                    <p>Atrae a un público diverso: Desde los locales que conocen la ciudad como la palma de su mano hasta los visitantes que buscan experiencias auténticas, tu empresa podrá destacar en el corazón de Medellín.</p>
+                    <p>Expón tu marca en el epicentro del cambio: Medellín es sinónimo de innovación, creatividad y progreso. Aprovecha este entorno dinámico para posicionar tu marca.</p> 
+                    <p>Potencia tu visibilidad: Desde el arte urbano de la Comuna 13 hasta los hermosos paisajes del Parque Arví, Medellín es un lugar lleno de historias que pueden ser parte de tu marca.</p> 
+             </div>
+          </div>
+       </div>
+ </section>
+
+<!-- <Home> -->
+<!-- <section book start> -->
+    <section class="book" id="book">
+        <div class="logo">
+            <h1><span>Registro</span> de Empresa</h1>
+          </div>
+        <div class="book-form">
+          <form method="POST" id="registrationForm">
+            <!-- Nombre de la Empresa -->
+            <input type="text" name="nombre_empresa" placeholder="Nombre de la Empresa" required>
+      
+            <!-- Descripción de la Empresa -->
+            <textarea name="descripcion" placeholder="Descripción de la Empresa" required></textarea>
+      
+            <!-- Correo de la Empresa -->
+            <input type="email" name="correo" placeholder="Correo de la Empresa" required>
+      
+            <!-- Teléfono de la Empresa -->
+            <input type="tel" name="telefono" placeholder="Teléfono de la Empresa">
+      
+            <!-- Categoría de la Empresa -->
+            <label for="categoria_id">Selecciona una categoría:</label>
+            <select name="categoria_id" id="categoria_id" required>
+              <option value="">Selecciona una categoría</option>
+              <option value="1">Restaurantes</option>
+              <option value="2">Cafeterías</option>
+              <option value="3">Supermercados</option>
+              <option value="4">Tiendas de Ropa</option>
+              <option value="5">Tiendas de Tecnología</option>
+              <option value="6">Consultorios Médicos</option>
+              <option value="7">Clínicas</option>
+              <option value="8">Centros Comerciales</option>
+              <option value="9">Parques de Diversiones</option>
+              <option value="10">Hoteles</option>
+              <option value="11">Agencias de Viajes</option>
+              <option value="12">Empresas de Construcción</option>
+              <option value="13">Servicios Financieros</option>
+              <option value="14">Educación</option>
+              <option value="15">Servicios de Transporte</option>
+            </select>
+      
+            <!-- NIT de la Empresa -->
+            <input type="text" name="nit" placeholder="NIT de la Empresa" required>
+      
+            <!-- Opciones adicionales -->
+            <label>
+              <input type="checkbox" name="tiene_parqueadero" value="1"> Tiene parqueadero
+            </label>
+            <label>
+              <input type="checkbox" name="zona_discapacitados" value="1"> Zona para discapacitados
+            </label>
+            <label>
+              <input type="checkbox" name="acepta_mascotas" value="1"> Acepta mascotas
+            </label>
+      
+            <!-- Monto mínimo -->
+            <input type="number" step="0.01" name="monto_minimo" placeholder="Monto mínimo" required>
+      
+            <!-- Dirección de la Empresa -->
+            <input type="text" name="direccion" placeholder="Dirección de la Empresa" required>
+      
+            <!-- Contraseña -->
+            <input type="password" name="contraseña" placeholder="Contraseña de la Empresa" required>
+      
+            <!-- Botón de registro -->
+            <input type="submit" value="Registrar Empresa" class="submit" required>
+          </form>
+        </div>
+      </section>
+      
+      <!-- Popup Message -->
+      <div class="popup-message" id="popupMessage">
+        ¡Registro exitoso! Te hemos enviado una confirmación a tu correo.
+      </div>
+      
+      <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+          event.preventDefault(); // Evita que la página se recargue
+      
+          // Obtener los valores de los inputs
+          const nombre_empresa = document.querySelector('input[name="nombre_empresa"]').value;
+          const correo = document.querySelector('input[name="correo"]').value;
+      
+          // Mostrar el mensaje flotante con los datos ingresados
+          const popupMessage = document.getElementById('popupMessage');
+          popupMessage.innerHTML = `¡Registro exitoso! Te hemos enviado una confirmación a tu correo: ${correo}`;
+          popupMessage.classList.add('show');
+      
+          // Ocultar el mensaje después de 5 segundos
+          setTimeout(function () {
+            popupMessage.classList.remove('show');
+          }, 5000);
+      
+          // Aquí podrías hacer una solicitud AJAX para enviar los datos a un servidor si lo deseas
+        });
+      </script>
+      
+      <!-- Popup Message -->
+      <div class="popup-message" id="popupMessage">
+        ¡Registro exitoso! Te hemos enviado una confirmación a tu correo.
+      </div>
+      
+      <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+          event.preventDefault(); // Evita que la página se recargue
+      
+          // Obtener los valores de los inputs
+          const nombre_empresa = document.querySelector('input[name="nombre_empresa"]').value;
+          const correo = document.querySelector('input[name="correo"]').value;
+      
+          // Mostrar el mensaje flotante con los datos ingresados
+          const popupMessage = document.getElementById('popupMessage');
+          popupMessage.innerHTML = `¡Registro exitoso! Te hemos enviado una confirmación a tu correo: ${correo}`;
+          popupMessage.classList.add('show');
+      
+          // Ocultar el mensaje después de 5 segundos
+          setTimeout(function () {
+            popupMessage.classList.remove('show');
+          }, 5000);
+      
+          // Aquí podrías hacer una solicitud AJAX para enviar los datos a un servidor si lo deseas
+        });
+      </script>
+      
+      
+
+   <!-- About start -->
+
+   <!-- About end -->
+
+
+      <!-- Footer Start -->
+      <footer id="footer">
+        <h1><span>PLAN</span>RADAR</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, fuga.</p>
+        <div class="social-links">
+           <i class="fa-brands fa-twitter"></i>
+           <i class="fa-brands fa-facebook-f"></i>
+           <i class="fa-brands fa-instagram"></i>
+           <i class="fa-brands fa-youtube"></i>
+           <i class="fa-brands fa-pinterest-p"></i>
+        </div>
+        <div class="credite">
+           <p>Designed By <a href="#">PLAN RADAR</a></p>
+        </div>
+        <div class="copyyright">
+           <p>&copy;PLAN RADAR</p>
+        </div>
+      <!-- Footer End -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+</body>
+</html>

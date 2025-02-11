@@ -1,0 +1,210 @@
+/* Establece las variables globales */
+:root {
+    --main-color: #212832;
+    --accent-color: #f1a501;
+    --white: #ffffff;
+    --gray: #5e6282;
+    --shadow: 0 0 15px black, 0.25;
+    --body-font: "Poppins", sans-serif;
+    --title-font: "Volkhov", serif;
+    --transition: 0.3s ease;
+}
+
+/* Estilos globales */
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    background-color: #f9f9f9;
+    color: var(--main-color);
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Fila principal */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo y nombre */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.logo-name {
+    font-size: 1.2rem;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* Menú de navegación */
+.main__menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main__menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main__menu ul li {
+    margin: 0 15px;
+}
+
+.main__menu ul li a {
+    font-size: 17px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main__menu ul li a:hover {
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+.main__menu ul li:nth-last-child(2) a {
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+}
+
+/* Estilo de los botones */
+.btn {
+    padding: 10px 30px;
+    background-color: transparent;
+    border-radius: 30px;
+    color: var(--main-color);
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+/* Estilo de la sección de registro */
+.registration-area {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.registration-area header h1 {
+    font-size: 36px;
+    color: var(--main-color);
+}
+
+.registration-area header p {
+    font-size: 18px;
+    color: var(--gray);
+    margin-top: 10px;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+select,
+input[type="radio"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+select:focus,
+input[type="radio"]:focus {
+    border-color: var(--accent-color);
+}
+
+/* Resultados */
+.results {
+    margin-top: 30px;
+}
+
+.result-package {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .main__menu ul {
+        display: block;
+        text-align: center;
+    }
+
+    .main__menu ul li {
+        margin: 10px 0;
+    }
+
+    .registration-area {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-area {
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .logo-name {
+        font-size: 1rem;
+    }
+
+    .form-group label,
+    .form-group select {
+        font-size: 14px;
+    }
+}

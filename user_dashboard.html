@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Plan Radar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="image-removebg-preview.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 style="color: #f1a501;">Plan Radar</h3>
+
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Jhon Doe</h6>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="user_dashboard.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="Index.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Pagina</a>
+                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Search">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-envelope me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Message</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all message</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notificatin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Profile updated</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">New user added</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Password changed</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">John Doe</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+
+
+            <!-- Sale & Revenue Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-line fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Usuarios</p>
+                                <h6 class="mb-0">1234</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Empresas</p>
+                                <h6 class="mb-0">234</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-area fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Planes</p>
+                                <h6 class="mb-0">$134</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-sm-6 col-xl-3">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                            <div class="ms-3">
+                                <p class="mb-2">Total Revenue</p>
+                                <h6 class="mb-0">$1234</h6>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <!-- Sale & Revenue End -->
+
+
+            <!-- Sales Chart Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Planes para hacer en Medellín</h6>
+                            <div class="owl-carousel testimonial-carousel">
+                                <!-- Plan 1 -->
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="img/plan-1.jpg" style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1">Visitar la Comuna 13</h5>
+                                    <p>Recorrer Comuna 13</p>
+                                    <p class="mb-0">"Recorre la famosa Comuna 13, un lugar lleno de arte urbano, historia y cultura. Disfruta de un tour guiado y aprende sobre la transformación de la zona. ¡Un plan imperdible!"</p>
+                                </div>
+                                <!-- Plan 2 -->
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="img/plan-2.jpg" style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1">Subir al Cerro Nutibara</h5>
+                                    <p>Vista panorámica</p>
+                                    <p class="mb-0">"Sube al Cerro Nutibara para disfrutar de una vista espectacular de Medellín. No te pierdas el Pueblito Paisa, una réplica de un típico pueblo antioqueño."</p>
+                                </div>
+                                <!-- Plan 3 -->
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="img/plan-3.jpg" style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1">Explorar el Parque Arví</h5>
+                                    <p>Aventura natural</p>
+                                    <p class="mb-0">"Disfruta de un día de naturaleza en el Parque Arví, un lugar perfecto para caminar, hacer un picnic o tomar el teleférico. ¡Escápate de la ciudad por un rato!"</p>
+                                </div>
+                                <!-- Plan 4 -->
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="img/plan-4.jpg" style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1">Museo de Antioquia</h5>
+                                    <p>Arte y cultura</p>
+                                    <p class="mb-0">"Visita el Museo de Antioquia y disfruta de su impresionante colección de arte contemporáneo y moderno. Un lugar perfecto para los amantes del arte."</p>
+                                </div>
+                                <!-- Plan 5 -->
+                                <div class="testimonial-item text-center">
+                                    <img class="img-fluid rounded-circle mx-auto mb-4" src="img/plan-5.jpg" style="width: 100px; height: 100px;">
+                                    <h5 class="mb-1">Jardín Botánico</h5>
+                                    <p>Relajación en la naturaleza</p>
+                                    <p class="mb-0">"Relájate en el Jardín Botánico de Medellín, un lugar lleno de plantas exóticas y hermosos senderos. ¡Perfecto para un paseo tranquilo y disfrutar de la naturaleza!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Salse & Revenue</h6>
+                                <a href="">Show All</a>
+                            </div>
+                            <canvas id="salse-revenue"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sales Chart End -->
+
+
+            <!-- Recent Sales Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light text-center rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0">Registros de Personas</h6>
+                        <a href="">Ver Todos</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-dark">
+                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
+                                    <th scope="col">Fecha de Registro</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Teléfono</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Registro 1 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Feb 2025</td>
+                                    <td>Juan Pérez</td>
+                                    <td>juanperez@example.com</td>
+                                    <td>(+57) 3001234567</td>
+                                    <td>Activo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Registro 2 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>02 Feb 2025</td>
+                                    <td>Ana López</td>
+                                    <td>analopez@example.com</td>
+                                    <td>(+57) 3009876543</td>
+                                    <td>Activo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Registro 3 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>03 Feb 2025</td>
+                                    <td>Pedro Martínez</td>
+                                    <td>pedromartinez@example.com</td>
+                                    <td>(+57) 3004567890</td>
+                                    <td>Inactivo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Registro 4 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>04 Feb 2025</td>
+                                    <td>Maria Gómez</td>
+                                    <td>mariagomez@example.com</td>
+                                    <td>(+57) 3001122334</td>
+                                    <td>Activo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Registro 5 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>05 Feb 2025</td>
+                                    <td>Carlos Rodríguez</td>
+                                    <td>carlosrodriguez@example.com</td>
+                                    <td>(+57) 3002233445</td>
+                                    <td>Activo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Registro 6 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>06 Feb 2025</td>
+                                    <td>Lucía Fernández</td>
+                                    <td>luciafernandez@example.com</td>
+                                    <td>(+57) 3003344556</td>
+                                    <td>Inactivo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Registro 7 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>07 Feb 2025</td>
+                                    <td>Javier García</td>
+                                    <td>javiergarcia@example.com</td>
+                                    <td>(+57) 3004455667</td>
+                                    <td>Activo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Registro 8 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>08 Feb 2025</td>
+                                    <td>Beatriz Ruiz</td>
+                                    <td>beatrizruiz@example.com</td>
+                                    <td>(+57) 3005566778</td>
+                                    <td>Inactivo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Registro 9 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>09 Feb 2025</td>
+                                    <td>Tomás Herrera</td>
+                                    <td>tomasherrera@example.com</td>
+                                    <td>(+57) 3006677889</td>
+                                    <td>Activo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Registro 10 -->
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>10 Feb 2025</td>
+                                    <td>Elena Díaz</td>
+                                    <td>elenadiaz@example.com</td>
+                                    <td>(+57) 3007788990</td>
+                                    <td>Activo</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Detalle</a></td>
+                                </tr>
+                                <!-- Añadir más registros de la misma forma, repite las filas hasta llegar a 20 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>            
+            <!-- Recent Sales End -->
+
+
+            <!-- Widgets Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="h-100 bg-light rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="mb-0">Comentarios sobre los Planes</h6>
+                                <a href="">Ver Todos</a>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-3">
+                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-0">Carlos Pérez</h6>
+                                        <small>Hace 10 minutos</small>
+                                    </div>
+                                    <span>Me encantó el plan para recorrer la Comuna 13, ¡es una experiencia única!</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-3">
+                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-0">Ana López</h6>
+                                        <small>Hace 30 minutos</small>
+                                    </div>
+                                    <span>El tour por el Jardín Botánico fue increíble. Muy recomendable para los amantes de la naturaleza.</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom py-3">
+                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-0">Luis Gómez</h6>
+                                        <small>Hace 45 minutos</small>
+                                    </div>
+                                    <span>¡El plan para visitar el Parque Arví es espectacular! Una forma perfecta de escapar de la ciudad.</span>
+                                </div>
+            
+                            </div>
+                            <div class="d-flex align-items-center pt-3">
+                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-0">Marta Rodríguez</h6>
+                                        <small>Hace 1 hora</small>
+                                    </div>
+                                    <span>Excelente plan para conocer la ciudad, los guías son muy amables y te muestran lugares ocultos.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="h-100 bg-light rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Calender</h6>
+                                <a href="">Show All</a>
+                            </div>
+                            <div id="calender"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4">
+                        <div class="h-100 bg-light rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Planes para Hacer en Medellín</h6>
+                                <a href="">Ver Todos</a>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <input class="form-control bg-transparent" type="text" placeholder="Agregar un plan">
+                                <button type="button" class="btn btn-primary ms-2">Agregar</button>
+                            </div>
+                            <!-- Plan 1 -->
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <input class="form-check-input m-0" type="checkbox">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span>Recorrer la Comuna 13</span>
+                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Plan 2 -->
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <input class="form-check-input m-0" type="checkbox">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span>Visitar el Parque Arví</span>
+                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Plan 3 -->
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <input class="form-check-input m-0" type="checkbox" checked>
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span><del>Recorrer el Jardín Botánico</del></span>
+                                        <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Plan 4 -->
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <input class="form-check-input m-0" type="checkbox">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span>Subir al Pueblito Paisa</span>
+                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Plan 5 -->
+                            <div class="d-flex align-items-center pt-2">
+                                <input class="form-check-input m-0" type="checkbox">
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <span>Ir al Museo de Antioquia</span>
+                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+            <!-- Widgets End -->
+
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        </br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+        // Función para mostrar u ocultar las secciones al hacer clic en los enlaces
+        function toggleSection(sectionId) {
+            // Ocultar el contenedor de bienvenida
+        document.getElementById("welcome-container").style.display = 'none';
+
+            var sections = document.querySelectorAll('.section-content');
+            sections.forEach(function (section) {
+                if (section.id === sectionId) {
+                    section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+                        // Mostrar la sección correspondiente
+                        var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+    <script>
+        // Verificar si el usuario es un administrador
+        if (localStorage.getItem('userRole') !== 'user') {
+            // Si no es un usuario, redirigir a login
+            window.location.href = 'login.html';
+        }
+        </script>
+</body>
+
+</html>

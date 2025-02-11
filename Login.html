@@ -1,0 +1,95 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMA TU PLAN</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Bootstrap CSS (Para que el navbar funcione correctamente) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- FontAwesome para el icono en el navbar -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <!-- Bootstrap Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Links -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container">
+          <a class="navbar-brand" href="index.html" id="logo">
+              <span id="travel">
+                  <img src="image-removebg-preview.ico" alt="logo" style="max-width: 100%; height: auto; width: 50px;" />
+              PLAN</span>RADAR
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fa-solid fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Arma_tu_plan.html">ARMA TU PLAN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="planes.html">PLANES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#gallary">GALLARY</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Login.html">LOGIN</a>
+                </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="home">
+        <div class="content">
+            <h5>Bienvenido</h5>
+            <h1>Inicia sesión</h1>
+            <p>Accede a tu cuenta y disfruta de nuestros servicios.</p>
+
+            <!-- Login Form -->
+            <form action="login_redirect.html" method="POST" id="loginForm">
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Iniciar sesión">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <h1><span>PLAN</span>RADAR</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, fuga.</p>
+        <div class="social-links">
+           <i class="fa-brands fa-twitter"></i>
+           <i class="fa-brands fa-facebook-f"></i>
+           <i class="fa-brands fa-instagram"></i>
+           <i class="fa-brands fa-youtube"></i>
+           <i class="fa-brands fa-pinterest-p"></i>
+        </div>
+        <div class="credite">
+           <p>Designed By <a href="#">PLAN RADAR</a></p>
+        </div>
+        <div class="copyyright">
+           <p>&copy;PLAN RADAR</p>
+        </div>
+
+    <!-- Bootstrap JS (Para funcionalidad del navbar, como el toggle de menú en móviles) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tu propio archivo JS si es necesario -->
+    <script src="Login.js"></script>
+</body>
+</html>
